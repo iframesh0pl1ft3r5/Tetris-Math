@@ -52,3 +52,8 @@ C:\Users\Joshu\OneDrive\Documents\#~~ Projects ~~#\github.com\Hack-Oldham\tetris
 C:\Users\Joshu\OneDrive\Documents\#~~ Projects ~~#\github.com\Hack-Oldham\tetris\tetris\obj\Debug\tetris.exe
 C:\Users\Joshu\OneDrive\Documents\#~~ Projects ~~#\github.com\Hack-Oldham\tetris\tetris\obj\Debug\tetris.xml
 C:\Users\Joshu\OneDrive\Documents\#~~ Projects ~~#\github.com\Hack-Oldham\tetris\tetris\obj\Debug\tetris.pdb
+C:\Users\Joshu\OneDrive\Documents\#~~ Projects ~~#\github.com\Hack-Oldham\tetris\tetris\obj\Debug\tetris.GameOver.resources
+C:\Users\Joshu\OneDrive\documents\#~~ Projects ~~#\github.com\Hack-Oldham\tetris\tetris\bin\Debug\Microsoft.Web.XmlTransform.dll
+C:\Users\Joshu\OneDrive\documents\#~~ Projects ~~#\github.com\Hack-Oldham\tetris\tetris\bin\Debug\NuGet.Core.dll
+C:\Users\Joshu\OneDrive\documents\#~~ Projects ~~#\github.com\Hack-Oldham\tetris\tetris\bin\Debug\Microsoft.Web.XmlTransform.pdb
+C:\Users\Joshu\OneDrive\documents\#~~ Projects ~~#\github.com\Hack-Oldham\tetris\tetris\obj\Debug\tetris.Question.resources

@@ -65,6 +65,42 @@ Namespace My
                 Me("PlayMusic") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("False")>  _
+        Public Property GameOver() As Boolean
+            Get
+                Return CType(Me("GameOver"),Boolean)
+            End Get
+            Set
+                Me("GameOver") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("000000")>  _
+        Public Property HighScore() As String
+            Get
+                Return CType(Me("HighScore"),String)
+            End Get
+            Set
+                Me("HighScore") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("False")>  _
+        Public Property askingQuestion() As Boolean
+            Get
+                Return CType(Me("askingQuestion"),Boolean)
+            End Get
+            Set
+                Me("askingQuestion") = value
+            End Set
+        End Property
     End Class
 End Namespace
 

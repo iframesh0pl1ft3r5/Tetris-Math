@@ -79,7 +79,7 @@ Public Class TetrisGame
     End Sub
 
     'initiates new game
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Public Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         score = 0
         lblScore.Text = score.ToString("000000")
         game.newGame()
@@ -118,7 +118,8 @@ Public Class TetrisGame
     End Sub
 
     Public Sub AskQuestion()
-        'MsgBox("test")
+        Question.Show()
+        Me.Hide()
     End Sub
 
     Private Sub BackgroundWorker1_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorker1.DoWork

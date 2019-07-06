@@ -199,6 +199,7 @@
                 grid(p.Y)(p.X) = ShapeColor
             End If
         Next
+
         Return grid
     End Function
 
@@ -241,10 +242,15 @@
                 If Not String.IsNullOrEmpty(grid(p.Y + 1)(p.X)) Then
                     RaiseEvent TouchDown(Me)
                     If p.Y <= 0 Then
-                        MsgBox("gameover")
+                        GameOver.Show()
+                        TetrisGame.Close()
+                        My.Settings.GameOver = True
+                        My.Settings.Save()
+                        Return True
+                    Else
+                        Return False
                     End If
-                    Return False
-                    End If
+                End If
                 End If
             'If p.Y = 0 Then
             '    MsgBox("gameover")

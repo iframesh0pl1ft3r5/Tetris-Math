@@ -187,15 +187,14 @@ Partial Class TetrisGame
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents game As GameGrid
     Friend WithEvents ShapePreview1 As ShapePreview
     Friend WithEvents Label1 As Label
-    Friend WithEvents lblScore As Label
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents Button1 As MaterialSkin.Controls.MaterialRaisedButton
     Friend WithEvents MaterialSingleLineTextField1 As MaterialSkin.Controls.MaterialSingleLineTextField
     Friend WithEvents Label2 As Label
     Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
     Friend WithEvents PlayMusic As CheckBox
+    Public WithEvents lblScore As Label
+    Public WithEvents game As GameGrid
 End Class

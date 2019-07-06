@@ -6,6 +6,7 @@
 Public Class GameGrid
     Inherits DataGridView
 
+    Dim firstshape As Boolean = True
     'constants used with Keypresses
     Const WM_LBUTTONDOWN As Integer = &H201
     Const WM_LBUTTONDBLCLK As Integer = &H203
@@ -46,12 +47,15 @@ Public Class GameGrid
         ElseIf m.Msg = WM_KEYDOWN Then
             If m.WParam.ToInt32 = VK_LEFT Then
                 moveLeft()
+                'moveCounter = moveCounter - 1
             ElseIf m.WParam.ToInt32 = VK_RIGHT Then
                 moveRight()
+                'moveCounter = moveCounter - 1
             ElseIf m.WParam.ToInt32 = VK_DOWN Then
                 moveDown()
             ElseIf m.WParam.ToInt32 = VK_UP Then
                 rotateShape()
+                'moveCounter = moveCounter - 1
             End If
             Return
         End If
@@ -59,7 +63,7 @@ Public Class GameGrid
     End Sub
 
     'timers used in game play
-    Private WithEvents tmr As New Timer With {.Interval = 500}
+    Public WithEvents tmr As New Timer With {.Interval = 500}
     Private WithEvents flashtmr As New Timer With {.Interval = 125}
 
     'variables used with flashtmr tick event
@@ -87,6 +91,7 @@ Public Class GameGrid
             gameGrid(x - 1) = DirectCast(row.Clone, String())
         Next
         newShape()
+
         currentShape = listShapes(0)
         RaiseEvent ShapeChanged(currentShape.CurrentPoints, currentShape.ShapeColor)
         rowCounter = 0
@@ -94,11 +99,12 @@ Public Class GameGrid
         flashtmr.Start()
     End Sub
 
+    Public Sub timerStart()
+        tmr.Start()
+    End Sub
+
     'creates a new falling shape
     Private Sub newShape()
-        tmr.Stop()
-        TetrisGame.AskQuestion()
-        tmr.Start()
         Dim sc() As String = {"R", "G", "B", "Y"}
         Dim ns As New Shape(r.Next(0, 7), sc(r.Next(0, 4)))
         listShapes.Add(ns)
@@ -154,6 +160,12 @@ Public Class GameGrid
                 RaiseEvent ShapeChanged(currentShape.CurrentPoints, currentShape.ShapeColor)
             End If
         End If
+        'questioncounter = questioncounter + 1
+        'If firstshape = True Then
+        '    If questioncounter = 2 Then
+        '        askquestionyn(False)
+        '    End If
+        'End If
         moveDown()
     End Sub
 
@@ -172,6 +184,7 @@ Public Class GameGrid
             RaiseEvent ShapeChanged(currentShape.CurrentPoints, currentShape.ShapeColor)
             'Debug.WriteLine("3")
         End If
+        askquestionyn(False)
     End Sub
 
     'clears full rows as they occur
@@ -230,20 +243,36 @@ Public Class GameGrid
     Private Sub HasChanged(grid As String()(), flash As Boolean, flashRow As Integer)
         Dim colors As New Dictionary(Of String, Color) From {{"R", Color.Red}, {"G", Color.Green}, {"B", Color.Blue}, {"Y", Color.Yellow}}
         Dim flashColors As New Dictionary(Of String, Color) From {{"R", Color.FromArgb(255, 165, 165)}, {"G", Color.FromArgb(165, 255, 165)}, {"B", Color.FromArgb(165, 165, 255)}, {"Y", Color.FromArgb(255, 255, 230)}}
-        For y As Integer = 0 To 29
-            For x As Integer = 0 To 19
-                If String.IsNullOrEmpty(grid(y)(x)) Then
-                    Me.Rows(y).Cells(x).Style.BackColor = Color.FromArgb(255, 55, 71, 79)
-                Else
-                    If Not flash OrElse (flash And Not flashRow = y) Then
-                        Me.Rows(y).Cells(x).Style.BackColor = colors(grid(y)(x))
+        If My.Settings.GameOver = False Then
+            For y As Integer = 0 To 29
+                For x As Integer = 0 To 19
+                    If String.IsNullOrEmpty(grid(y)(x)) Then
+
+                        Me.Rows(y).Cells(x).Style.BackColor = Color.FromArgb(255, 55, 71, 79)
+
                     Else
-                        Me.Rows(y).Cells(x).Style.BackColor = flashColors(grid(y)(x))
+                        If Not flash OrElse (flash And Not flashRow = y) Then
+                            Me.Rows(y).Cells(x).Style.BackColor = colors(grid(y)(x))
+                        Else
+                            Me.Rows(y).Cells(x).Style.BackColor = flashColors(grid(y)(x))
+                        End If
                     End If
-                End If
+                Next
             Next
-        Next
+        End If
     End Sub
 
+    Private Sub askquestionyn(askedquestion As Boolean)
+        If askedquestion = False Then
+            tmr.Stop()
+            TetrisGame.AskQuestion()
+            My.Settings.askingQuestion = True
+            My.Settings.Save()
+        Else
+        End If
+        moveDown()
+        questioncounter = 0
+    End Sub
 
+    Private questioncounter As Integer = 0
 End Class
