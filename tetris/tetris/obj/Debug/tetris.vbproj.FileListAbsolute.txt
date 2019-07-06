@@ -38,3 +38,17 @@ C:\Public\tetris\tetris\obj\Debug\tetris.xml
 C:\Public\tetris\tetris\obj\Debug\tetris.pdb
 C:\Public\tetris\tetris\obj\Debug\tetris.Welcome.resources
 Y:\tetris\tetris\obj\Debug\tetris.Welcome.resources
+C:\Users\Joshu\OneDrive\Documents\#~~ Projects ~~#\github.com\Hack-Oldham\tetris\tetris\bin\Debug\tetris.exe.config
+C:\Users\Joshu\OneDrive\Documents\#~~ Projects ~~#\github.com\Hack-Oldham\tetris\tetris\bin\Debug\tetris.exe
+C:\Users\Joshu\OneDrive\Documents\#~~ Projects ~~#\github.com\Hack-Oldham\tetris\tetris\bin\Debug\tetris.pdb
+C:\Users\Joshu\OneDrive\Documents\#~~ Projects ~~#\github.com\Hack-Oldham\tetris\tetris\bin\Debug\tetris.xml
+C:\Users\Joshu\OneDrive\Documents\#~~ Projects ~~#\github.com\Hack-Oldham\tetris\tetris\obj\Debug\tetris.vbprojAssemblyReference.cache
+C:\Users\Joshu\OneDrive\Documents\#~~ Projects ~~#\github.com\Hack-Oldham\tetris\tetris\obj\Debug\tetris.TetrisGame.resources
+C:\Users\Joshu\OneDrive\Documents\#~~ Projects ~~#\github.com\Hack-Oldham\tetris\tetris\obj\Debug\tetris.Resources.resources
+C:\Users\Joshu\OneDrive\Documents\#~~ Projects ~~#\github.com\Hack-Oldham\tetris\tetris\obj\Debug\tetris.Welcome.resources
+C:\Users\Joshu\OneDrive\Documents\#~~ Projects ~~#\github.com\Hack-Oldham\tetris\tetris\obj\Debug\tetris.vbproj.GenerateResource.cache
+C:\Users\Joshu\OneDrive\Documents\#~~ Projects ~~#\github.com\Hack-Oldham\tetris\tetris\obj\Debug\tetris.vbproj.CoreCompileInputs.cache
+C:\Users\Joshu\OneDrive\Documents\#~~ Projects ~~#\github.com\Hack-Oldham\tetris\tetris\obj\Debug\tetris.vbproj.CopyComplete
+C:\Users\Joshu\OneDrive\Documents\#~~ Projects ~~#\github.com\Hack-Oldham\tetris\tetris\obj\Debug\tetris.exe
+C:\Users\Joshu\OneDrive\Documents\#~~ Projects ~~#\github.com\Hack-Oldham\tetris\tetris\obj\Debug\tetris.xml
+C:\Users\Joshu\OneDrive\Documents\#~~ Projects ~~#\github.com\Hack-Oldham\tetris\tetris\obj\Debug\tetris.pdb

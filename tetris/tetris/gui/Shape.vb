@@ -240,10 +240,12 @@
             If p.Y >= 0 Then
                 If Not String.IsNullOrEmpty(grid(p.Y + 1)(p.X)) Then
                     RaiseEvent TouchDown(Me)
-
+                    If p.Y <= 0 Then
+                        MsgBox("gameover")
+                    End If
                     Return False
+                    End If
                 End If
-            End If
             'If p.Y = 0 Then
             '    MsgBox("gameover")
             'End If

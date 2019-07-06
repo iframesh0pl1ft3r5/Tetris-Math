@@ -40,8 +40,8 @@ Public Class TetrisGame
                 ShapePreview1.Rows(x - 1).Height = 15
             End If
         Next
-        TextBox1.BackColor = Color.FromArgb(255, 55, 71, 79)
-        TextBox1.ForeColor = Color.White
+        'TextBox1.BackColor = Color.FromArgb(255, 55, 71, 79)
+        'TextBox1.ForeColor = Color.White
         PlayMusic.Checked = My.Settings.PlayMusic
     End Sub
 

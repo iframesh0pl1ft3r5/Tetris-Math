@@ -29,10 +29,8 @@ Partial Class TetrisGame
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Button1 = New MaterialSkin.Controls.MaterialRaisedButton()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
         Me.PlayMusic = New System.Windows.Forms.CheckBox()
-        Me.Label3 = New System.Windows.Forms.Label()
         Me.ShapePreview1 = New tetris.ShapePreview()
         Me.game = New tetris.GameGrid()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -46,7 +44,7 @@ Partial Class TetrisGame
         Me.Label1.BackColor = System.Drawing.Color.FromArgb(CType(CType(55, Byte), Integer), CType(CType(71, Byte), Integer), CType(CType(79, Byte), Integer))
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Silver
-        Me.Label1.Location = New System.Drawing.Point(362, 488)
+        Me.Label1.Location = New System.Drawing.Point(383, 488)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(75, 26)
         Me.Label1.TabIndex = 2
@@ -58,7 +56,7 @@ Partial Class TetrisGame
         Me.lblScore.BackColor = System.Drawing.Color.FromArgb(CType(CType(55, Byte), Integer), CType(CType(71, Byte), Integer), CType(CType(79, Byte), Integer))
         Me.lblScore.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblScore.ForeColor = System.Drawing.Color.Silver
-        Me.lblScore.Location = New System.Drawing.Point(443, 488)
+        Me.lblScore.Location = New System.Drawing.Point(464, 488)
         Me.lblScore.Name = "lblScore"
         Me.lblScore.Size = New System.Drawing.Size(84, 26)
         Me.lblScore.TabIndex = 3
@@ -73,13 +71,13 @@ Partial Class TetrisGame
         Me.DataGridView1.GridColor = System.Drawing.Color.FromArgb(CType(CType(55, Byte), Integer), CType(CType(71, Byte), Integer), CType(CType(79, Byte), Integer))
         Me.DataGridView1.Location = New System.Drawing.Point(-9, 58)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(572, 518)
+        Me.DataGridView1.Size = New System.Drawing.Size(596, 518)
         Me.DataGridView1.TabIndex = 5
         '
         'Button1
         '
         Me.Button1.Depth = 0
-        Me.Button1.Location = New System.Drawing.Point(436, 526)
+        Me.Button1.Location = New System.Drawing.Point(457, 526)
         Me.Button1.MouseState = MaterialSkin.MouseState.HOVER
         Me.Button1.Name = "Button1"
         Me.Button1.Primary = True
@@ -94,19 +92,11 @@ Partial Class TetrisGame
         Me.Label2.BackColor = System.Drawing.Color.FromArgb(CType(CType(55, Byte), Integer), CType(CType(71, Byte), Integer), CType(CType(79, Byte), Integer))
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.Silver
-        Me.Label2.Location = New System.Drawing.Point(325, 93)
+        Me.Label2.Location = New System.Drawing.Point(321, 121)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(150, 26)
         Me.Label2.TabIndex = 7
         Me.Label2.Text = "Current Block:"
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(367, 32)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(172, 26)
-        Me.TextBox1.TabIndex = 8
         '
         'BackgroundWorker1
         '
@@ -116,24 +106,12 @@ Partial Class TetrisGame
         Me.PlayMusic.AutoSize = True
         Me.PlayMusic.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.PlayMusic.ForeColor = System.Drawing.SystemColors.Control
-        Me.PlayMusic.Location = New System.Drawing.Point(449, 447)
+        Me.PlayMusic.Location = New System.Drawing.Point(470, 447)
         Me.PlayMusic.Name = "PlayMusic"
         Me.PlayMusic.Size = New System.Drawing.Size(78, 24)
         Me.PlayMusic.TabIndex = 9
         Me.PlayMusic.Text = "Music?"
         Me.PlayMusic.UseVisualStyleBackColor = True
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.BackColor = System.Drawing.Color.FromArgb(CType(CType(55, Byte), Integer), CType(CType(71, Byte), Integer), CType(CType(79, Byte), Integer))
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!)
-        Me.Label3.ForeColor = System.Drawing.Color.Silver
-        Me.Label3.Location = New System.Drawing.Point(233, 34)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(128, 24)
-        Me.Label3.TabIndex = 10
-        Me.Label3.Text = "Current Block:"
         '
         'ShapePreview1
         '
@@ -154,7 +132,7 @@ Partial Class TetrisGame
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.ShapePreview1.DefaultCellStyle = DataGridViewCellStyle1
         Me.ShapePreview1.GridColor = System.Drawing.Color.FromArgb(CType(CType(55, Byte), Integer), CType(CType(71, Byte), Integer), CType(CType(79, Byte), Integer))
-        Me.ShapePreview1.Location = New System.Drawing.Point(448, 93)
+        Me.ShapePreview1.Location = New System.Drawing.Point(469, 91)
         Me.ShapePreview1.Name = "ShapePreview1"
         Me.ShapePreview1.RowHeadersVisible = False
         Me.ShapePreview1.Size = New System.Drawing.Size(91, 91)
@@ -189,10 +167,8 @@ Partial Class TetrisGame
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(55, Byte), Integer), CType(CType(71, Byte), Integer), CType(CType(79, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(551, 561)
-        Me.Controls.Add(Me.Label3)
+        Me.ClientSize = New System.Drawing.Size(565, 561)
         Me.Controls.Add(Me.PlayMusic)
-        Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.lblScore)
@@ -220,8 +196,6 @@ Partial Class TetrisGame
     Friend WithEvents Button1 As MaterialSkin.Controls.MaterialRaisedButton
     Friend WithEvents MaterialSingleLineTextField1 As MaterialSkin.Controls.MaterialSingleLineTextField
     Friend WithEvents Label2 As Label
-    Friend WithEvents TextBox1 As TextBox
     Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
     Friend WithEvents PlayMusic As CheckBox
-    Friend WithEvents Label3 As Label
 End Class
