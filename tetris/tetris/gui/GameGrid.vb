@@ -3,6 +3,7 @@
 ''' DoubleBuffered. Restricts user selection of cells.
 ''' </summary>
 ''' <remarks></remarks>
+''' 
 Public Class GameGrid
     Inherits DataGridView
 
@@ -99,6 +100,7 @@ Public Class GameGrid
         flashtmr.Start()
     End Sub
 
+    ' can be called outside the object. this resumes the clock which allows the blocks to fall and the game to resume
     Public Sub timerStart()
         tmr.Start()
     End Sub
@@ -184,6 +186,7 @@ Public Class GameGrid
             RaiseEvent ShapeChanged(currentShape.CurrentPoints, currentShape.ShapeColor)
             'Debug.WriteLine("3")
         End If
+        ' calls the sub which causes a question to be asked.
         askquestionyn(False)
     End Sub
 
@@ -223,15 +226,15 @@ Public Class GameGrid
                 HasChanged(gameGrid, False, -1)
                 missATick = False
                 rowCounter += 1
-                    If rowCounter Mod 10 = 0 Then
-                        tmr.Interval -= 40
-                        RaiseEvent IncrementScore(((1000 - tmr.Interval) * 0.35))
-                    ElseIf rowCounter Mod 5 = 0 Then
-                        tmr.Interval -= 20
-                        RaiseEvent IncrementScore(((1000 - tmr.Interval) * 0.25))
-                    Else
-                        RaiseEvent IncrementScore(((1000 - tmr.Interval) * 0.05))
-                    End If
+                If rowCounter Mod 10 = 0 Then
+                    tmr.Interval -= 40
+                    RaiseEvent IncrementScore(((1000 - tmr.Interval) * 0.35))
+                ElseIf rowCounter Mod 5 = 0 Then
+                    tmr.Interval -= 20
+                    RaiseEvent IncrementScore(((1000 - tmr.Interval) * 0.25))
+                Else
+                    RaiseEvent IncrementScore(((1000 - tmr.Interval) * 0.05))
+                End If
         End Select
     End Sub
 
@@ -266,6 +269,7 @@ Public Class GameGrid
         End If
     End Sub
 
+    ' this is run every time a block has been placed
     Private Sub askquestionyn(askedquestion As Boolean)
         If askedquestion = False Then
             tmr.Stop()

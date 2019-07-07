@@ -4,6 +4,8 @@ Public Class Question
     Public userClose As Boolean = True
 
     Dim wrongcounter As Integer = 0
+
+    ' checks to see if the answer given is correct, if it isnt then adds one to the wrong counter and if that counter reaches 5 then displays the game over form
     Private Sub MaterialRaisedButton1_Click(sender As Object, e As EventArgs) Handles MaterialRaisedButton1.Click
         Dim RealAnswer As Decimal
         Dim TheirAnswer As Integer
@@ -21,6 +23,7 @@ Public Class Question
             Case 6
                 RealAnswer = partOne / partTwo
         End Select
+        ' converts the answer to a whole number
         RealAnswer = Math.Round(RealAnswer)
         Try
             TheirAnswer = Int(answer.Text)
@@ -77,6 +80,7 @@ Public Class Question
     Dim partOne As Integer
     Dim partTwo As Integer
 
+    ' randomly genorates the question. the higher the score the bigger the values the question is. (upper bound of the randomisers are the score + 25)
     Private Sub Question_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' Initialize the random-number generator.
         Randomize()
@@ -103,6 +107,7 @@ Public Class Question
         Label1.Text = partOne.ToString + " " + symbolAsString + " " + partTwo.ToString
     End Sub
 
+    ' if the user closes the form end the program. Or if the question has been answered resume the game.
     Private Sub Question_Closed(sender As Object, e As EventArgs) Handles Me.Closed
         If userClose = True Then
             Application.Exit()

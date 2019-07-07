@@ -152,7 +152,7 @@ Partial Class GameOver
         '
         'PictureBox1
         '
-        Me.PictureBox1.Image = Global.tetris.My.Resources.Resources.Blue_Screen_of_Death
+        Me.PictureBox1.Image = Global.Tetris_Math.My.Resources.Resources.Blue_Screen_of_Death
         Me.PictureBox1.Location = New System.Drawing.Point(0, 64)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(800, 387)

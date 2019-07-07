@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class TetrisGame
     Inherits MaterialSkin.Controls.MaterialForm
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -32,8 +32,8 @@ Partial Class TetrisGame
         Me.Label2 = New System.Windows.Forms.Label()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
         Me.PlayMusic = New System.Windows.Forms.CheckBox()
-        Me.ShapePreview1 = New tetris.ShapePreview()
-        Me.game = New tetris.GameGrid()
+        Me.ShapePreview1 = New Tetris_Math.ShapePreview()
+        Me.game = New Tetris_Math.GameGrid()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ShapePreview1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.game, System.ComponentModel.ISupportInitialize).BeginInit()

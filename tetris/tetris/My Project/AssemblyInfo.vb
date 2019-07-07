@@ -8,17 +8,17 @@ Imports System.Runtime.InteropServices
 
 ' Review the values of the assembly attributes
 
-<Assembly: AssemblyTitle("tetris")>
-<Assembly: AssemblyDescription("")>
-<Assembly: AssemblyCompany("")>
-<Assembly: AssemblyProduct("tetris")>
-<Assembly: AssemblyCopyright("Copyright ©  2018")>
+<Assembly: AssemblyTitle("Tetris Math")>
+<Assembly: AssemblyDescription("A game of Tetris to help you learn maths")>
+<Assembly: AssemblyCompany("iframesh0pl1ft3r5")>
+<Assembly: AssemblyProduct("Tetris Math")>
+<Assembly: AssemblyCopyright("Copyright © iframesh0pl1ft3r5 2019")>
 <Assembly: AssemblyTrademark("")>
 
 <Assembly: ComVisible(False)>
 
 'The following GUID is for the ID of the typelib if this project is exposed to COM
-<Assembly: Guid("11ba2086-3124-4822-8d97-e5d1a5d554a4")>
+<Assembly: Guid("eae35e19-0dc4-4182-934e-f3c823bd14e3")>
 
 ' Version information for an assembly consists of the following four values:
 '

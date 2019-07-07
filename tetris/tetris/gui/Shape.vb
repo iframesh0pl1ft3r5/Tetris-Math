@@ -241,6 +241,7 @@
             If p.Y >= 0 Then
                 If Not String.IsNullOrEmpty(grid(p.Y + 1)(p.X)) Then
                     RaiseEvent TouchDown(Me)
+                    ' this if statement is run when the blocks reach the top of the game.
                     If p.Y <= 0 Then
                         GameOver.Show()
                         TetrisGame.Close()

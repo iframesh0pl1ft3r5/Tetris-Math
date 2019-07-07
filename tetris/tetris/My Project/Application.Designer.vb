@@ -32,7 +32,7 @@ Namespace My
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
         Protected Overrides Sub OnCreateMainForm()
-            Me.MainForm = Global.tetris.load
+            Me.MainForm = Global.Tetris_Math.load
         End Sub
     End Class
 End Namespace

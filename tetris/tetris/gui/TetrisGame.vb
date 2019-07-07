@@ -2,7 +2,6 @@
 Imports System.IO
 Imports System.ComponentModel
 Imports System.IO.Compression
-Imports System.IO.Compression.FileSystem
 Public Class TetrisGame
 
     Private score As Integer = 0
@@ -117,19 +116,19 @@ Public Class TetrisGame
         game.CurrentCell = Nothing
     End Sub
 
+    ' shows the ask queestion form and hides the game so the player can't cheat
     Public Sub AskQuestion()
         Question.Show()
         Me.Hide()
     End Sub
 
-    Private Sub BackgroundWorker1_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorker1.DoWork
-
-    End Sub
+    ' allows the music stored in the exe to be saved to a file so it can be played.
     Public Sub savefromresources(ByVal FilePath As String, ByVal File As Object)
         Dim FByte() As Byte = File
         My.Computer.FileSystem.WriteAllBytes(FilePath, FByte, True)
     End Sub
 
+    ' tidies up the gaame so there are not many files left behind
     Private Sub TetrisGame_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
         If My.Computer.FileSystem.FileExists(Application.StartupPath & "\music.zip") Then
             My.Computer.FileSystem.DeleteFile(Application.StartupPath & "\music.zip")
@@ -140,6 +139,7 @@ Public Class TetrisGame
         My.Computer.Audio.Stop()
     End Sub
 
+    ' enables or disables the music depending on the users preference. This is saved in a setting so the next time the program loads it can remember the users choice.
     Private Sub PlayMusic_CheckedChanged(sender As Object, e As EventArgs) Handles PlayMusic.CheckedChanged
         If PlayMusic.CheckState = 1 Then
             My.Settings.PlayMusic = True

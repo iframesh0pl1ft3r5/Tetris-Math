@@ -39,7 +39,7 @@ Namespace My.Resources
         Friend ReadOnly Property ResourceManager() As Global.System.Resources.ResourceManager
             Get
                 If Object.ReferenceEquals(resourceMan, Nothing) Then
-                    Dim temp As Global.System.Resources.ResourceManager = New Global.System.Resources.ResourceManager("tetris.Resources", GetType(Resources).Assembly)
+                    Dim temp As Global.System.Resources.ResourceManager = New Global.System.Resources.ResourceManager("Tetris_Math.Resources", GetType(Resources).Assembly)
                     resourceMan = temp
                 End If
                 Return resourceMan
@@ -76,16 +76,6 @@ Namespace My.Resources
         Friend ReadOnly Property ifs_load() As Byte()
             Get
                 Dim obj As Object = ResourceManager.GetObject("ifs_load", resourceCulture)
-                Return CType(obj,Byte())
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Looks up a localized resource of type System.Byte[].
-        '''</summary>
-        Friend ReadOnly Property ifs_tune() As Byte()
-            Get
-                Dim obj As Object = ResourceManager.GetObject("ifs_tune", resourceCulture)
                 Return CType(obj,Byte())
             End Get
         End Property
