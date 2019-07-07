@@ -130,7 +130,7 @@ Partial Class Question
         Me.response.BackColor = System.Drawing.Color.FromArgb(CType(CType(55, Byte), Integer), CType(CType(71, Byte), Integer), CType(CType(79, Byte), Integer))
         Me.response.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.response.ForeColor = System.Drawing.Color.Gainsboro
-        Me.response.Location = New System.Drawing.Point(364, 380)
+        Me.response.Location = New System.Drawing.Point(261, 380)
         Me.response.Name = "response"
         Me.response.Size = New System.Drawing.Size(0, 26)
         Me.response.TabIndex = 14

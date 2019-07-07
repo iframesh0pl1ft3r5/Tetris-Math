@@ -5,18 +5,22 @@ Public Class Welcome
     Private Sub Welcome_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         My.Settings.GameOver = False
         My.Settings.Save()
-        If My.Computer.FileSystem.FileExists(Application.StartupPath & "\ifs-tune.zip") Then
-            My.Computer.FileSystem.DeleteFile(Application.StartupPath & "\ifs-tune.zip")
+        'If My.Computer.FileSystem.FileExists(Application.StartupPath & "\ifs-tune.zip") Then
+        '    My.Computer.FileSystem.DeleteFile(Application.StartupPath & "\ifs-tune.zip")
+        'End If
+        'If My.Computer.FileSystem.FileExists(Application.StartupPath & "\ifs-tune.wav") Then
+        '    My.Computer.FileSystem.DeleteFile(Application.StartupPath & "\ifs-tune.wav")
+        'End If
+        'savefromresources(Application.StartupPath & "\ifs-tune.zip", My.Resources.ifs_tune)
+        'ZipFile.ExtractToDirectory(Application.StartupPath & "\ifs-tune.zip", Application.StartupPath & "\")
+        'If My.Computer.FileSystem.FileExists(Application.StartupPath & "\ifs-tune.zip") Then
+        '    My.Computer.FileSystem.DeleteFile(Application.StartupPath & "\ifs-tune.zip")
+        'End If
+        'My.Computer.Audio.Play(Application.StartupPath & "\ifs-tune.wav")
+        If My.Computer.FileSystem.FileExists(Application.StartupPath & "\ifs-load.mp4") Then
+            My.Computer.FileSystem.DeleteFile(Application.StartupPath & "\ifs-load.mp4")
         End If
-        If My.Computer.FileSystem.FileExists(Application.StartupPath & "\ifs-tune.wav") Then
-            My.Computer.FileSystem.DeleteFile(Application.StartupPath & "\ifs-tune.wav")
-        End If
-        savefromresources(Application.StartupPath & "\ifs-tune.zip", My.Resources.ifs_tune)
-        ZipFile.ExtractToDirectory(Application.StartupPath & "\ifs-tune.zip", Application.StartupPath & "\")
-        If My.Computer.FileSystem.FileExists(Application.StartupPath & "\ifs-tune.zip") Then
-            My.Computer.FileSystem.DeleteFile(Application.StartupPath & "\ifs-tune.zip")
-        End If
-        My.Computer.Audio.Play(Application.StartupPath & "\ifs-tune.wav")
+
     End Sub
 
     Private Sub MaterialRaisedButton1_Click(sender As Object, e As EventArgs) Handles MaterialRaisedButton1.Click

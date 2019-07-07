@@ -61,9 +61,6 @@ C:\Public\Hack-Oldham\tetris\tetris\bin\Debug\tetris.exe.config
 C:\Public\Hack-Oldham\tetris\tetris\bin\Debug\tetris.exe
 C:\Public\Hack-Oldham\tetris\tetris\bin\Debug\tetris.pdb
 C:\Public\Hack-Oldham\tetris\tetris\bin\Debug\tetris.xml
-C:\Public\Hack-Oldham\tetris\tetris\bin\Debug\Microsoft.Web.XmlTransform.dll
-C:\Public\Hack-Oldham\tetris\tetris\bin\Debug\NuGet.Core.dll
-C:\Public\Hack-Oldham\tetris\tetris\bin\Debug\Microsoft.Web.XmlTransform.pdb
 C:\Public\Hack-Oldham\tetris\tetris\obj\Debug\tetris.vbprojAssemblyReference.cache
 C:\Public\Hack-Oldham\tetris\tetris\obj\Debug\tetris.GameOver.resources
 C:\Public\Hack-Oldham\tetris\tetris\obj\Debug\tetris.TetrisGame.resources
@@ -95,3 +92,15 @@ Y:\Hack-Oldham\tetris\tetris\obj\Debug\tetris.vbproj.CopyComplete
 Y:\Hack-Oldham\tetris\tetris\obj\Debug\tetris.exe
 Y:\Hack-Oldham\tetris\tetris\obj\Debug\tetris.xml
 Y:\Hack-Oldham\tetris\tetris\obj\Debug\tetris.pdb
+C:\Public\Hack-Oldham\tetris\tetris\bin\Debug\Interop.WMPLib.dll
+C:\Public\Hack-Oldham\tetris\tetris\bin\Debug\AxInterop.WMPLib.dll
+C:\Public\Hack-Oldham\tetris\tetris\obj\Debug\Interop.WMPLib.dll
+C:\Public\Hack-Oldham\tetris\tetris\obj\Debug\AxInterop.WMPLib.dll
+C:\Public\Hack-Oldham\tetris\tetris\obj\Debug\tetris.vbproj.ResolveComReference.cache
+C:\Public\Hack-Oldham\tetris\tetris\obj\Debug\tetris.load.resources
+Y:\Hack-Oldham\tetris\tetris\bin\Debug\Interop.WMPLib.dll
+Y:\Hack-Oldham\tetris\tetris\bin\Debug\AxInterop.WMPLib.dll
+Y:\Hack-Oldham\tetris\tetris\obj\Debug\Interop.WMPLib.dll
+Y:\Hack-Oldham\tetris\tetris\obj\Debug\AxInterop.WMPLib.dll
+Y:\Hack-Oldham\tetris\tetris\obj\Debug\tetris.vbproj.ResolveComReference.cache
+Y:\Hack-Oldham\tetris\tetris\obj\Debug\tetris.load.resources

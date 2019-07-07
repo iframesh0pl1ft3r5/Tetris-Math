@@ -204,11 +204,15 @@ Public Class GameGrid
                 HasChanged(gameGrid, True, flashRow)
             Case 4
                 Dim newGrid As New List(Of String())(gameGrid)
-                For Each p As Point In listShapes.Last.CurrentPoints
-                    If p.Y > -1 Then
-                        newGrid(p.Y)(p.X) = ""
-                    End If
-                Next
+                Try
+                    For Each p As Point In listShapes.Last.CurrentPoints
+                        If p.Y > -1 Then
+                            newGrid(p.Y)(p.X) = ""
+                        End If
+                    Next
+                Catch ex As Exception
+                    Debug.WriteLine(ex.ToString)
+                End Try
                 Dim newRow(19) As String
                 newGrid.RemoveAt(flashRow)
                 newGrid.Insert(0, newRow)
@@ -219,15 +223,15 @@ Public Class GameGrid
                 HasChanged(gameGrid, False, -1)
                 missATick = False
                 rowCounter += 1
-                If rowCounter Mod 10 = 0 Then
-                    tmr.Interval -= 40
-                    RaiseEvent IncrementScore(((1000 - tmr.Interval) * 0.35))
-                ElseIf rowCounter Mod 5 = 0 Then
-                    tmr.Interval -= 20
-                    RaiseEvent IncrementScore(((1000 - tmr.Interval) * 0.25))
-                Else
-                    RaiseEvent IncrementScore(((1000 - tmr.Interval) * 0.05))
-                End If
+                    If rowCounter Mod 10 = 0 Then
+                        tmr.Interval -= 40
+                        RaiseEvent IncrementScore(((1000 - tmr.Interval) * 0.35))
+                    ElseIf rowCounter Mod 5 = 0 Then
+                        tmr.Interval -= 20
+                        RaiseEvent IncrementScore(((1000 - tmr.Interval) * 0.25))
+                    Else
+                        RaiseEvent IncrementScore(((1000 - tmr.Interval) * 0.05))
+                    End If
         End Select
     End Sub
 

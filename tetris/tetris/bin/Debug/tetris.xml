@@ -27,6 +27,11 @@ tetris
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:tetris.My.Resources.Resources.ifs_load">
+<summary>
+  Looks up a localized resource of type System.Byte[].
+</summary>
+</member>
 <member name="P:tetris.My.Resources.Resources.ifs_tune">
 <summary>
   Looks up a localized resource of type System.Byte[].

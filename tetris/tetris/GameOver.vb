@@ -12,6 +12,7 @@ Public Class GameOver
             My.Settings.Save()
         End If
         payerHighscore.Text = My.Settings.HighScore
+
         TetrisGame.Close()
     End Sub
 

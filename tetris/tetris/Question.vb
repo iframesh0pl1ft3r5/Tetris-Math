@@ -2,6 +2,8 @@
 
 Public Class Question
     Public userClose As Boolean = True
+
+    Dim wrongcounter As Integer = 0
     Private Sub MaterialRaisedButton1_Click(sender As Object, e As EventArgs) Handles MaterialRaisedButton1.Click
         Dim RealAnswer As Decimal
         Dim TheirAnswer As Integer
@@ -23,17 +25,52 @@ Public Class Question
         Try
             TheirAnswer = Int(answer.Text)
             If TheirAnswer = RealAnswer Then
+                If wrongcounter >= 5 Then
+                    userClose = False
+                    GameOver.Show()
+                    Me.Close()
+                End If
                 My.Settings.askingQuestion = False
                 My.Settings.Save()
                 TetrisGame.Show()
                 userClose = False
                 Me.Close()
             Else
-                response.Text = "Your answer is incorrect"
+                Dim score As String = Int(Int(TetrisGame.lblScore.Text) - 10)
+                response.Text = "Your answer is incorrect. You have lost 10 points from your score"
+                wrongcounter = wrongcounter + 1
+                If Int(TetrisGame.lblScore.Text) - 10 < 0 Then
+                    response.Text = "Your answer is incorrect."
+                Else
+                    If score.Length = 0 Then
+                        Debug.WriteLine("00000" + score)
+                        TetrisGame.lblScore.Text = "00000" + score
+                    ElseIf score.Length = 1 Then
+                        Debug.WriteLine("0000" + score)
+                        TetrisGame.lblScore.Text = "0000" + score
+                    ElseIf score.Length = 2 Then
+                        Debug.WriteLine("000" + score)
+                        TetrisGame.lblScore.Text = "000" + score
+                    ElseIf score.Length = 3 Then
+                        Debug.WriteLine("00" + score)
+                        TetrisGame.lblScore.Text = "00" + score
+                    ElseIf score.Length = 4 Then
+                        Debug.WriteLine("0" + score)
+                        TetrisGame.lblScore.Text = "0" + score
+                    ElseIf score.Length = 5 Then
+                        Debug.WriteLine(score)
+                        TetrisGame.lblScore.Text = score
+                    End If
+                End If
             End If
         Catch ex As Exception
             response.Text = "Please enter a valid answer"
         End Try
+        If wrongcounter >= 5 Then
+            userClose = False
+            GameOver.Show()
+            Me.Close()
+        End If
     End Sub
 
     Dim symbol As Integer
