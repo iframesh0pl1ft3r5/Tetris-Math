@@ -1,4 +1,4 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
 Partial Class TetrisGame
     Inherits MaterialSkin.Controls.MaterialForm
 
@@ -32,8 +32,8 @@ Partial Class TetrisGame
         Me.Label2 = New System.Windows.Forms.Label()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
         Me.PlayMusic = New System.Windows.Forms.CheckBox()
-        Me.ShapePreview1 = New tetris.ShapePreview()
-        Me.game = New tetris.GameGrid()
+        Me.ShapePreview1 = New Tetris_Math.ShapePreview()
+        Me.game = New Tetris_Math.GameGrid()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ShapePreview1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.game, System.ComponentModel.ISupportInitialize).BeginInit()
