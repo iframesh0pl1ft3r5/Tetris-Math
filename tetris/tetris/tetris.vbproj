@@ -176,5 +176,8 @@
   <ItemGroup>
     <None Include="Resources\Blue_Screen_of_Death.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tetrismath.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

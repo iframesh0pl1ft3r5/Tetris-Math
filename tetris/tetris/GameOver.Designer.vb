@@ -175,6 +175,7 @@ Partial Class GameOver
         Me.Controls.Add(Me.PlayAgain)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.DataGridView1)
+        Me.MaximizeBox = False
         Me.MaximumSize = New System.Drawing.Size(800, 450)
         Me.MinimumSize = New System.Drawing.Size(800, 450)
         Me.Name = "GameOver"
