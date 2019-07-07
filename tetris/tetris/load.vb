@@ -11,6 +11,7 @@ Public Class load
     ' save the video so it is ready
     Private Sub load_Load(sender As Object, e As EventArgs) Handles Me.Load
         Me.TopMost = True
+        AxWindowsMediaPlayer1.enableContextMenu = False
         Timer1.Start()
 
         If My.Computer.FileSystem.FileExists(Application.StartupPath & "\ifs-load.zip") Then
