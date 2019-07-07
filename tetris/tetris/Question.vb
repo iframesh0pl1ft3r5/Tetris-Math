@@ -1,7 +1,7 @@
 ﻿Imports System.ComponentModel
 
 Public Class Question
-    Dim userClose As Boolean = True
+    Public userClose As Boolean = True
     Private Sub MaterialRaisedButton1_Click(sender As Object, e As EventArgs) Handles MaterialRaisedButton1.Click
         My.Settings.askingQuestion = False
         My.Settings.Save()

@@ -244,6 +244,8 @@
                     If p.Y <= 0 Then
                         GameOver.Show()
                         TetrisGame.Close()
+                        Question.userClose = False
+                        Question.Close()
                         My.Settings.GameOver = True
                         My.Settings.Save()
                         Return True
