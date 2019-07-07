@@ -2,6 +2,7 @@
 
 # The Plan
 
+ALL CODE WORKS <br>
 A simple maths game that will allow the players to learn maths skills needed in a classroom. The game will be coded in vb.net and will use a MySQL database to get the questions. <br>
 After thinking about what game we want to "copy". We have decided to create a game of tetris which involves a math element.<br>
 The game can be played by a keyboard. <br>
