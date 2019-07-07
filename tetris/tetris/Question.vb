@@ -14,6 +14,10 @@ Public Class Question
                 RealAnswer = partOne * partTwo
             Case 4
                 RealAnswer = partOne / partTwo
+            Case 5
+                RealAnswer = partOne * partTwo
+            Case 6
+                RealAnswer = partOne / partTwo
         End Select
         RealAnswer = Math.Round(RealAnswer)
         Try
@@ -40,10 +44,10 @@ Public Class Question
         ' Initialize the random-number generator.
         Randomize()
         ' Generate random value between 1 and 6.
-        symbol = CInt(Int((4 * Rnd()) + 1))
+        symbol = CInt(Int((6 * Rnd()) + 1))
         Randomize()
-        partOne = CInt(Math.Floor(((Int(TetrisGame.lblScore.Text) + 10)) * Rnd())) + 1
-        partTwo = CInt(Math.Floor(((Int(TetrisGame.lblScore.Text) + 10)) * Rnd())) + 1
+        partOne = CInt(Math.Floor(((Int(TetrisGame.lblScore.Text) + 25)) * Rnd())) + 1
+        partTwo = CInt(Math.Floor(((Int(TetrisGame.lblScore.Text) + 25)) * Rnd())) + 1
         Dim symbolAsString As String
         Select Case symbol
             Case 1
@@ -53,6 +57,10 @@ Public Class Question
             Case 3
                 symbolAsString = "×"
             Case 4
+                symbolAsString = "÷"
+            Case 5
+                symbolAsString = "×"
+            Case 6
                 symbolAsString = "÷"
         End Select
         Label1.Text = partOne.ToString + " " + symbolAsString + " " + partTwo.ToString

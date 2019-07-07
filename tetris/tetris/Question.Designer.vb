@@ -163,6 +163,7 @@ Partial Class Question
         Me.Controls.Add(Me.DataGridView1)
         Me.MaximizeBox = False
         Me.Name = "Question"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Question"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()

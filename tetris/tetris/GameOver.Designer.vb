@@ -179,6 +179,7 @@ Partial Class GameOver
         Me.MaximumSize = New System.Drawing.Size(800, 450)
         Me.MinimumSize = New System.Drawing.Size(800, 450)
         Me.Name = "GameOver"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "GameOver"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()

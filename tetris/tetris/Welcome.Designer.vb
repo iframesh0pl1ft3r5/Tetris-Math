@@ -62,6 +62,7 @@ Partial Class Welcome
         Me.Controls.Add(Me.PictureBox1)
         Me.MaximizeBox = False
         Me.Name = "Welcome"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Welcome"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

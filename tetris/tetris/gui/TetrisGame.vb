@@ -21,7 +21,7 @@ Public Class TetrisGame
             My.Computer.FileSystem.DeleteFile(Application.StartupPath & "\music.zip")
         End If
         If My.Settings.PlayMusic = True Then
-            My.Computer.Audio.Play(Application.StartupPath & "\tetris.wav")
+            My.Computer.Audio.Play(Application.StartupPath & "\tetris.wav", AudioPlayMode.BackgroundLoop)
         End If
 
         For x As Integer = 1 To 20
@@ -143,7 +143,7 @@ Public Class TetrisGame
     Private Sub PlayMusic_CheckedChanged(sender As Object, e As EventArgs) Handles PlayMusic.CheckedChanged
         If PlayMusic.CheckState = 1 Then
             My.Settings.PlayMusic = True
-            My.Computer.Audio.Play(Application.StartupPath & "\tetris.wav")
+            My.Computer.Audio.Play(Application.StartupPath & "\tetris.wav", AudioPlayMode.BackgroundLoop)
         Else
             My.Settings.PlayMusic = False
             My.Computer.Audio.Stop()
