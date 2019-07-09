@@ -1,4 +1,4 @@
-# Hack-Oldham
+# Tetris Math made for: Hack-Oldham
 
 # The Plan
 
