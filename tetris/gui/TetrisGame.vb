@@ -8,17 +8,15 @@ Public Class TetrisGame
 
     'sets up DGVs
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        If My.Computer.FileSystem.FileExists(Application.StartupPath & "\music.zip") Then
-            My.Computer.FileSystem.DeleteFile(Application.StartupPath & "\music.zip")
-        End If
         If My.Computer.FileSystem.FileExists(Application.StartupPath & "\tetris.wav") Then
-            My.Computer.FileSystem.DeleteFile(Application.StartupPath & "\tetris.wav")
+        Else
+            savefromresources(Application.StartupPath & "\music.zip", My.Resources.tetris)
+            ZipFile.ExtractToDirectory(Application.StartupPath & "\music.zip", Application.StartupPath & "\")
+            If My.Computer.FileSystem.FileExists(Application.StartupPath & "\music.zip") Then
+                My.Computer.FileSystem.DeleteFile(Application.StartupPath & "\music.zip")
+            End If
         End If
-        savefromresources(Application.StartupPath & "\music.zip", My.Resources.tetris)
-        ZipFile.ExtractToDirectory(Application.StartupPath & "\music.zip", Application.StartupPath & "\")
-        If My.Computer.FileSystem.FileExists(Application.StartupPath & "\music.zip") Then
-            My.Computer.FileSystem.DeleteFile(Application.StartupPath & "\music.zip")
-        End If
+
         If My.Settings.PlayMusic = True Then
             My.Computer.Audio.Play(Application.StartupPath & "\tetris.wav", AudioPlayMode.BackgroundLoop)
         End If
@@ -130,12 +128,6 @@ Public Class TetrisGame
 
     ' tidies up the gaame so there are not many files left behind
     Private Sub TetrisGame_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
-        If My.Computer.FileSystem.FileExists(Application.StartupPath & "\music.zip") Then
-            My.Computer.FileSystem.DeleteFile(Application.StartupPath & "\music.zip")
-        End If
-        If My.Computer.FileSystem.FileExists(Application.StartupPath & "\tetris.wav") Then
-            My.Computer.FileSystem.DeleteFile(Application.StartupPath & "\tetris.wav")
-        End If
         My.Computer.Audio.Stop()
     End Sub
 

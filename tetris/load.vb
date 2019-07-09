@@ -14,16 +14,13 @@ Public Class load
         AxWindowsMediaPlayer1.enableContextMenu = False
         Timer1.Start()
 
-        If My.Computer.FileSystem.FileExists(Application.StartupPath & "\ifs-load.zip") Then
-            My.Computer.FileSystem.DeleteFile(Application.StartupPath & "\ifs-load.zip")
-        End If
         If My.Computer.FileSystem.FileExists(Application.StartupPath & "\ifs-load.mp4") Then
-            My.Computer.FileSystem.DeleteFile(Application.StartupPath & "\ifs-load.mp4")
-        End If
-        savefromresources(Application.StartupPath & "\ifs-load.zip", My.Resources.ifs_load)
-        ZipFile.ExtractToDirectory(Application.StartupPath & "\ifs-load.zip", Application.StartupPath & "\")
-        If My.Computer.FileSystem.FileExists(Application.StartupPath & "\ifs-load.zip") Then
-            My.Computer.FileSystem.DeleteFile(Application.StartupPath & "\ifs-load.zip")
+        Else
+            savefromresources(Application.StartupPath & "\ifs-load.zip", My.Resources.ifs_load)
+            ZipFile.ExtractToDirectory(Application.StartupPath & "\ifs-load.zip", Application.StartupPath & "\")
+            If My.Computer.FileSystem.FileExists(Application.StartupPath & "\ifs-load.zip") Then
+                My.Computer.FileSystem.DeleteFile(Application.StartupPath & "\ifs-load.zip")
+            End If
         End If
         AxWindowsMediaPlayer1.URL = Application.StartupPath & "\ifs-load.mp4"
     End Sub
@@ -38,12 +35,5 @@ Public Class load
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         Welcome.Show()
         Me.Close()
-    End Sub
-
-    ' tidies up the files saved before
-    Private Sub load_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
-        If My.Computer.FileSystem.FileExists(Application.StartupPath & "\ifs-load.zip") Then
-            My.Computer.FileSystem.DeleteFile(Application.StartupPath & "\ifs-load.zip")
-        End If
     End Sub
 End Class
