@@ -7,24 +7,9 @@ Public Class Question
 
     ' checks to see if the answer given is correct, if it isnt then adds one to the wrong counter and if that counter reaches 5 then displays the game over form
     Private Sub MaterialRaisedButton1_Click(sender As Object, e As EventArgs) Handles MaterialRaisedButton1.Click
-        Dim RealAnswer As Decimal
-        Dim TheirAnswer As Integer
-        Select Case symbol
-            Case 1
-                RealAnswer = partOne + partTwo
-            Case 2
-                RealAnswer = partOne - partTwo
-            Case 3
-                RealAnswer = partOne * partTwo
-            Case 4
-                RealAnswer = partOne / partTwo
-            Case 5
-                RealAnswer = partOne * partTwo
-            Case 6
-                RealAnswer = partOne / partTwo
-        End Select
         ' converts the answer to a whole number
         RealAnswer = Math.Round(RealAnswer)
+
         Try
             TheirAnswer = Int(answer.Text)
             If TheirAnswer = RealAnswer Then
@@ -79,6 +64,7 @@ Public Class Question
     Dim symbol As Integer
     Dim partOne As Integer
     Dim partTwo As Integer
+    Dim symbolAsString As String
 
     ' randomly genorates the question. the higher the score the bigger the values the question is. (upper bound of the randomisers are the score + 25)
     Private Sub Question_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -87,9 +73,7 @@ Public Class Question
         ' Generate random value between 1 and 6.
         symbol = CInt(Int((6 * Rnd()) + 1))
         Randomize()
-        partOne = CInt(Math.Floor(((Int(TetrisGame.lblScore.Text) + 25)) * Rnd())) + 1
-        partTwo = CInt(Math.Floor(((Int(TetrisGame.lblScore.Text) + 25)) * Rnd())) + 1
-        Dim symbolAsString As String
+        symbol = 4
         Select Case symbol
             Case 1
                 symbolAsString = "+"
@@ -104,7 +88,26 @@ Public Class Question
             Case 6
                 symbolAsString = "÷"
         End Select
-        Label1.Text = partOne.ToString + " " + symbolAsString + " " + partTwo.ToString
+        Do
+            partOne = CInt(Math.Floor(((Int(TetrisGame.lblScore.Text) + 25)) * Rnd())) + 1
+            partTwo = CInt(Math.Floor(((Int(TetrisGame.lblScore.Text) + 25)) * Rnd())) + 1
+            Select Case symbol
+                Case 1
+                    RealAnswer = partOne + partTwo
+                Case 2
+                    RealAnswer = partOne - partTwo
+                Case 3
+                    RealAnswer = partOne * partTwo
+                Case 4
+                    RealAnswer = partOne / partTwo
+                Case 5
+                    RealAnswer = partOne * partTwo
+                Case 6
+                    RealAnswer = partOne / partTwo
+            End Select
+            Debug.WriteLine(RealAnswer)
+            Label1.Text = partOne.ToString + " " + symbolAsString + " " + partTwo.ToString
+        Loop Until Math.Round(RealAnswer) = RealAnswer
     End Sub
 
     ' if the user closes the form end the program. Or if the question has been answered resume the game.
@@ -114,4 +117,7 @@ Public Class Question
         End If
         TetrisGame.game.timerStart()
     End Sub
+
+    Dim RealAnswer As Decimal
+    Dim TheirAnswer As Integer
 End Class
