@@ -1,3 +1,7 @@
+# Archive Notice
+Development of this project has been stopped and the repository has been archived.
+This project can be considered dead.
+
 # Tetris Math made for: Hack-Oldham
 
 # The Plan
